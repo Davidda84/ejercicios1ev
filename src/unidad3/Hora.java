@@ -30,8 +30,9 @@ public class Hora {
 	        long second = TimeUnit.SECONDS.toSeconds((long) tiempoSegundos) - (hours * 3600 + minute * 60);
 	        if (hours == 24)
 	        	hours=0;
-	        System.out.println("La hora introducida es = " + hora + ":" + min + ":" + seg);
-	        System.out.println("La hora calculada es = " + hours + ":" + minute + ":" + second);
+
+	        System.out.printf("La hora introducida es = %02d:%02d:%02d\n", hora, min, seg);
+	        System.out.printf("La hora calculada es = %02d:%02d:%02d", hours, minute, second);
 		}
 	}
 }
