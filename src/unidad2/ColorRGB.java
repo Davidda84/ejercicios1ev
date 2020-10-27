@@ -14,25 +14,26 @@ public class ColorRGB {
 			Se le pedirá al usuario que introduzca por teclado las componentes rgb (rojo,
 			verde y azul).*/
 
-		Scanner teclado = new Scanner(System.in);
-		double rojo;
-		double verde;
-		double azul;
-		double y;
-		double i;
-		double q;
-		
-		System.out.println("Vamos a convertir el codigo de color RGB a YIQ, sigua las instrucciones:");
-		System.out.println("Introduzca el valor RGB para el Rojo:");
-		rojo = teclado.nextDouble();
-		System.out.println("Introduzca el valor RGB para el Verde:");
-		verde = teclado.nextDouble();
-		System.out.println("Introduzca el valor RGB para el Azul:");
-		azul = teclado.nextDouble();
-		y = 0.299 * rojo + 0.587 * verde + 0.114 * azul;
-		i = 0.596 * rojo - 0.275 * verde - 0.321 * azul;
-		q = 0.212 * rojo - 0.528 * verde + 0.311 * azul;
-		System.out.printf("El codigo YIQ será:  Y = %.3f I = %.3f Q = %.3f",y,i,q);
+		try (Scanner teclado = new Scanner(System.in)) {
+			double rojo;
+			double verde;
+			double azul;
+			double y;
+			double i;
+			double q;
+			
+			System.out.println("Vamos a convertir el codigo de color RGB a YIQ, sigua las instrucciones:");
+			System.out.println("Introduzca el valor RGB para el Rojo:");
+			rojo = teclado.nextDouble();
+			System.out.println("Introduzca el valor RGB para el Verde:");
+			verde = teclado.nextDouble();
+			System.out.println("Introduzca el valor RGB para el Azul:");
+			azul = teclado.nextDouble();
+			y = 0.299 * rojo + 0.587 * verde + 0.114 * azul;
+			i = 0.596 * rojo - 0.275 * verde - 0.321 * azul;
+			q = 0.212 * rojo - 0.528 * verde + 0.311 * azul;
+			System.out.printf("El codigo YIQ será:  Y = %.3f I = %.3f Q = %.3f",y,i,q);
+		}
 
 	}
 
