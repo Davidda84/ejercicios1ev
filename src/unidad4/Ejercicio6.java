@@ -19,9 +19,17 @@ public class Ejercicio6 {
 		
 		for (int i = 0; i < vector.length; i++) {
 
-				x  = ((int) Math.floor(Math.random()*198) - 99);
+			boolean repite = false;
+			
+			x  = ((int) Math.floor(Math.random()*198) - 99);
 				
-				if (Arrays.asList(vector).contains(x)) {
+				for ( int y : vector){
+				    if (y ==x){
+				        repite = true;
+				    }
+				}
+				
+				if (repite == true) {
 					i--;
 				}
 				else {
