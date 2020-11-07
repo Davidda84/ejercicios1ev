@@ -18,7 +18,7 @@ public class Ejercicio10 {
 		
 		int tamaño;
 		Random valor = new Random();
-		int min=10000000;
+		int min=0;
 		
 		try (Scanner teclado = new Scanner(System.in)) {
 			System.out.println("Hola, vamos a construir un vector");
