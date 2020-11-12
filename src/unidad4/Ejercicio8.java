@@ -49,26 +49,27 @@ public class Ejercicio8 {
 			for (int x : vector) {
 				
 				if ( x == 13) {
+					contador13++;
 					contador--;
 					int dimension = vector.length - j;
 					if (dimension < 14) {
 						suma13 = 0;
 						for(int k = j+1; k < vector.length; k++) {
-							suma13 = suma13 + vector [k];
+							suma13 += vector [k];
 						}
 						if (suma13 == 7) {
+							contador -= (dimension - 1 );
 							contador7++;
-							contador = contador - (dimension - 1 );
 						}
 					}
 					else {
 						suma13 = 0;
 						for(int l = j+1; l < j+14; l++) {
-							suma13 = suma13 + vector [l];
+							suma13 += vector [l];
 						}
 						if (suma13 == 7) {
+							contador -= 13;
 							contador7++;
-							contador = contador - 13;
 						}
 					}
 				}
