@@ -19,7 +19,7 @@ public class Ejercicio16 {
 		System.out.println("Vector Original: " + Arrays.toString(vector));
 		System.out.println("Vector Inserción Directa: " + Arrays.toString(InDirecta(vector)));
 		System.out.println("Vector Selección Directa: " + Arrays.toString(SelDirecta(vector)));
-		System.out.println("Vector Selección Directa: " + Arrays.toString(InterDirecto(vector)));
+		System.out.println("Vector Intercambio Directo: " + Arrays.toString(InterDirecto(vector)));
 	}
 		
 	public static int [] InDirecta(int vector[]){                                            
